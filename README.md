@@ -136,6 +136,7 @@ Add your name and favorite Bay Area sports team below. Each person should add ON
 
 - Mir Abbas - Favorite Team: Golden State Warriors
 - Andrew Nguyen - Favorite Team: Golden State Warriors
+- Anton Tran - Favorite Team: Golden State Warriors
 ---
 
 ## Bay Area Sports Teams Reference 🏆
