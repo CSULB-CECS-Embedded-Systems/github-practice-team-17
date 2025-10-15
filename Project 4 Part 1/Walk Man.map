@@ -1,0 +1,835 @@
+Component: Arm Compiler for Embedded 6.24 Tool: armlink [5f371500]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for StackMem
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    pll.o(.ARM.exidx.text.PLL_Init) refers to pll.o(.text.PLL_Init) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.Delay1ms) refers to st7735.o(.text.Delay1ms) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.rodata.Bcmd) for Bcmd
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.text.commonInit) for commonInit
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_InitB) refers to st7735.o(.text.ST7735_InitB) for [Anonymous Symbol]
+    st7735.o(.text.commonInit) refers to st7735.o(.bss.RowStart) for RowStart
+    st7735.o(.text.commonInit) refers to st7735.o(.bss.ColStart) for ColStart
+    st7735.o(.text.commonInit) refers to st7735.o(.text.commandList) for commandList
+    st7735.o(.ARM.exidx.text.commonInit) refers to st7735.o(.text.commonInit) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_SetCursor) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_SetCursor) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.ARM.exidx.text.ST7735_SetCursor) refers to st7735.o(.text.ST7735_SetCursor) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_FillScreen) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_FillScreen) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_FillScreen) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_FillScreen) refers to st7735.o(.text.ST7735_FillScreen) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.rodata.Rcmd1) for Rcmd1
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.commonInit) for commonInit
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.rodata.Rcmd2red) for Rcmd2red
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.commandList) for commandList
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.rodata.Rcmd2green) for Rcmd2green
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss.ColStart) for ColStart
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss.RowStart) for RowStart
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.rodata.Rcmd3) for Rcmd3
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss.TabColor) for TabColor
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_InitR) refers to st7735.o(.text.ST7735_InitR) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.commandList) refers to st7735.o(.text.commandList) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawPixel) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_DrawPixel) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_DrawPixel) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_DrawPixel) refers to st7735.o(.text.ST7735_DrawPixel) for [Anonymous Symbol]
+    st7735.o(.text.setAddrWindow) refers to st7735.o(.bss.ColStart) for ColStart
+    st7735.o(.text.setAddrWindow) refers to st7735.o(.bss.RowStart) for RowStart
+    st7735.o(.ARM.exidx.text.setAddrWindow) refers to st7735.o(.text.setAddrWindow) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_DrawCircle) refers to st7735.o(.text.ST7735_DrawCircle) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_FillCircle) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_FillCircle) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_FillCircle) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_FillCircle) refers to st7735.o(.text.ST7735_FillCircle) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawFastVLine) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_DrawFastVLine) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_DrawFastVLine) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_DrawFastVLine) refers to st7735.o(.text.ST7735_DrawFastVLine) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawLine) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_DrawLine) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_DrawLine) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_DrawLine) refers to st7735.o(.text.ST7735_DrawLine) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawFastHLine) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_DrawFastHLine) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_DrawFastHLine) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_DrawFastHLine) refers to st7735.o(.text.ST7735_DrawFastHLine) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_FillRect) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_FillRect) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_FillRect) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_FillRect) refers to st7735.o(.text.ST7735_FillRect) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.ST7735_Color565) refers to st7735.o(.text.ST7735_Color565) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.ST7735_SwapColor) refers to st7735.o(.text.ST7735_SwapColor) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawBitmap) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_DrawBitmap) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_DrawBitmap) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_DrawBitmap) refers to st7735.o(.text.ST7735_DrawBitmap) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.rodata.Font) for Font
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_DrawCharS) refers to st7735.o(.text.ST7735_DrawCharS) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.rodata.Font) for Font
+    st7735.o(.ARM.exidx.text.ST7735_DrawChar) refers to st7735.o(.text.ST7735_DrawChar) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawString) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(.ARM.exidx.text.ST7735_DrawString) refers to st7735.o(.text.ST7735_DrawString) for [Anonymous Symbol]
+    st7735.o(.text.fillmessage) refers to st7735.o(.bss.Messageindex) for Messageindex
+    st7735.o(.text.fillmessage) refers to st7735.o(.bss.Message) for Message
+    st7735.o(.ARM.exidx.text.fillmessage) refers to st7735.o(.text.fillmessage) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.bss.Messageindex) for Messageindex
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.text.fillmessage) for fillmessage
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.bss.Message) for Message
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(.ARM.exidx.text.ST7735_OutUDec) refers to st7735.o(.text.ST7735_OutUDec) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.bss.TabColor) for TabColor
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.bss._height) for _height
+    st7735.o(.ARM.exidx.text.ST7735_SetRotation) refers to st7735.o(.text.ST7735_SetRotation) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.ST7735_InvertDisplay) refers to st7735.o(.text.ST7735_InvertDisplay) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss.X) for X
+    st7735.o(.ARM.exidx.text.ST7735_PlotClear) refers to st7735.o(.text.ST7735_PlotClear) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_PlotPoint) refers to st7735.o(.text.ST7735_PlotPoint) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.lastj) for lastj
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_PlotLine) refers to st7735.o(.text.ST7735_PlotLine) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_PlotPoints) refers to st7735.o(.text.ST7735_PlotPoints) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_PlotBar) refers to st7735.o(.text.ST7735_PlotBar) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotdBfs) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotdBfs) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_PlotdBfs) refers to st7735.o(.rodata.dBfs) for dBfs
+    st7735.o(.text.ST7735_PlotdBfs) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_PlotdBfs) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_PlotdBfs) refers to st7735.o(.text.ST7735_PlotdBfs) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotNext) refers to st7735.o(.bss.X) for X
+    st7735.o(.ARM.exidx.text.ST7735_PlotNext) refers to st7735.o(.text.ST7735_PlotNext) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotNextErase) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotNextErase) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.ST7735_PlotNextErase) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.ST7735_PlotNextErase) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.ST7735_PlotNextErase) refers to st7735.o(.text.ST7735_PlotNextErase) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(.ARM.exidx.text.ST7735_OutChar) refers to st7735.o(.text.ST7735_OutChar) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_OutString) refers to st7735.o(.text.ST7735_OutChar) for ST7735_OutChar
+    st7735.o(.ARM.exidx.text.ST7735_OutString) refers to st7735.o(.text.ST7735_OutString) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_SetTextColor) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.ARM.exidx.text.ST7735_SetTextColor) refers to st7735.o(.text.ST7735_SetTextColor) for [Anonymous Symbol]
+    st7735.o(.text.fputc) refers to st7735.o(.text.ST7735_OutChar) for ST7735_OutChar
+    st7735.o(.ARM.exidx.text.fputc) refers to st7735.o(.text.fputc) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.fgetc) refers to st7735.o(.text.fgetc) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.ferror) refers to st7735.o(.text.ferror) for [Anonymous Symbol]
+    st7735.o(.text.Output_Init) refers to st7735.o(.text.ST7735_InitR) for ST7735_InitR
+    st7735.o(.text.Output_Init) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.Output_Init) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.Output_Init) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.Output_Init) refers to st7735.o(.text.Output_Init) for [Anonymous Symbol]
+    st7735.o(.text.Output_Clear) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.Output_Clear) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.Output_Clear) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.Output_Clear) refers to st7735.o(.text.Output_Clear) for [Anonymous Symbol]
+    st7735.o(.text.Output_Off) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.Output_Off) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.Output_Off) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.Output_Off) refers to st7735.o(.text.Output_Off) for [Anonymous Symbol]
+    st7735.o(.text.Output_On) refers to st7735.o(.text.ST7735_InitR) for ST7735_InitR
+    st7735.o(.text.Output_On) refers to st7735.o(.bss._width) for _width
+    st7735.o(.text.Output_On) refers to st7735.o(.bss._height) for _height
+    st7735.o(.text.Output_On) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.ARM.exidx.text.Output_On) refers to st7735.o(.text.Output_On) for [Anonymous Symbol]
+    st7735.o(.text.Output_Color) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.ARM.exidx.text.Output_Color) refers to st7735.o(.text.Output_Color) for [Anonymous Symbol]
+    weatherdisplay.o(.text.main) refers to st7735.o(.text.ST7735_InitR) for ST7735_InitR
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.bss.g_clouds) for g_clouds
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.bss.g_rainDrops) for g_rainDrops
+    weatherdisplay.o(.text.main) refers to rand.o(.text) for rand
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.bss.animationFrame) for animationFrame
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.text.drawSunnyScreen) for drawSunnyScreen
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.data.UpdateSunnyAnimation.prevBlink) for UpdateSunnyAnimation.prevBlink
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.rodata.sunny_day_blink) for sunny_day_blink
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.rodata.sunny_day) for sunny_day
+    weatherdisplay.o(.text.main) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.text.drawCloudyScreen) for drawCloudyScreen
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.data.UpdateCloudyAnimation.prevBlink) for UpdateCloudyAnimation.prevBlink
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.rodata.cloud_day_blink) for cloud_day_blink
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.rodata.cloud_day) for cloud_day
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.text.drawRainyScreen) for drawRainyScreen
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.data.animateRain.prevBlink) for animateRain.prevBlink
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.rodata.rainy_blink) for rainy_blink
+    weatherdisplay.o(.text.main) refers to weatherdisplay.o(.rodata.rainy) for rainy
+    weatherdisplay.o(.ARM.exidx.text.main) refers to weatherdisplay.o(.text.main) for [Anonymous Symbol]
+    weatherdisplay.o(.ARM.exidx.text.PortF_Init) refers to weatherdisplay.o(.text.PortF_Init) for [Anonymous Symbol]
+    weatherdisplay.o(.ARM.exidx.text.DelayWait10ms) refers to weatherdisplay.o(.text.DelayWait10ms) for [Anonymous Symbol]
+    weatherdisplay.o(.text.drawSunnyScreen) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    weatherdisplay.o(.text.drawSunnyScreen) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    weatherdisplay.o(.ARM.exidx.text.drawSunnyScreen) refers to weatherdisplay.o(.text.drawSunnyScreen) for [Anonymous Symbol]
+    weatherdisplay.o(.text.animateSun) refers to weatherdisplay.o(.bss.animationFrame) for animationFrame
+    weatherdisplay.o(.text.animateSun) refers to weatherdisplay.o(.data.UpdateSunnyAnimation.prevBlink) for UpdateSunnyAnimation.prevBlink
+    weatherdisplay.o(.text.animateSun) refers to weatherdisplay.o(.rodata.sunny_day_blink) for sunny_day_blink
+    weatherdisplay.o(.text.animateSun) refers to weatherdisplay.o(.rodata.sunny_day) for sunny_day
+    weatherdisplay.o(.text.animateSun) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    weatherdisplay.o(.ARM.exidx.text.animateSun) refers to weatherdisplay.o(.text.animateSun) for [Anonymous Symbol]
+    weatherdisplay.o(.text.drawCloudyScreen) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    weatherdisplay.o(.text.drawCloudyScreen) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    weatherdisplay.o(.ARM.exidx.text.drawCloudyScreen) refers to weatherdisplay.o(.text.drawCloudyScreen) for [Anonymous Symbol]
+    weatherdisplay.o(.text.animateClouds) refers to weatherdisplay.o(.bss.animationFrame) for animationFrame
+    weatherdisplay.o(.text.animateClouds) refers to weatherdisplay.o(.data.UpdateCloudyAnimation.prevBlink) for UpdateCloudyAnimation.prevBlink
+    weatherdisplay.o(.text.animateClouds) refers to weatherdisplay.o(.rodata.cloud_day_blink) for cloud_day_blink
+    weatherdisplay.o(.text.animateClouds) refers to weatherdisplay.o(.rodata.cloud_day) for cloud_day
+    weatherdisplay.o(.text.animateClouds) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    weatherdisplay.o(.ARM.exidx.text.animateClouds) refers to weatherdisplay.o(.text.animateClouds) for [Anonymous Symbol]
+    weatherdisplay.o(.text.drawRainyScreen) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    weatherdisplay.o(.text.drawRainyScreen) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    weatherdisplay.o(.ARM.exidx.text.drawRainyScreen) refers to weatherdisplay.o(.text.drawRainyScreen) for [Anonymous Symbol]
+    weatherdisplay.o(.text.animateRain) refers to weatherdisplay.o(.bss.animationFrame) for animationFrame
+    weatherdisplay.o(.text.animateRain) refers to weatherdisplay.o(.data.animateRain.prevBlink) for animateRain.prevBlink
+    weatherdisplay.o(.text.animateRain) refers to weatherdisplay.o(.rodata.rainy_blink) for rainy_blink
+    weatherdisplay.o(.text.animateRain) refers to weatherdisplay.o(.rodata.rainy) for rainy
+    weatherdisplay.o(.text.animateRain) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    weatherdisplay.o(.ARM.exidx.text.animateRain) refers to weatherdisplay.o(.text.animateRain) for [Anonymous Symbol]
+    weatherdisplay.o(.text.DrawStringSizedColor) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    weatherdisplay.o(.ARM.exidx.text.DrawStringSizedColor) refers to weatherdisplay.o(.text.DrawStringSizedColor) for [Anonymous Symbol]
+    weatherdisplay.o(.text.UpdateSunnyAnimation) refers to weatherdisplay.o(.bss.animationFrame) for animationFrame
+    weatherdisplay.o(.text.UpdateSunnyAnimation) refers to weatherdisplay.o(.data.UpdateSunnyAnimation.prevBlink) for UpdateSunnyAnimation.prevBlink
+    weatherdisplay.o(.text.UpdateSunnyAnimation) refers to weatherdisplay.o(.rodata.sunny_day_blink) for sunny_day_blink
+    weatherdisplay.o(.text.UpdateSunnyAnimation) refers to weatherdisplay.o(.rodata.sunny_day) for sunny_day
+    weatherdisplay.o(.text.UpdateSunnyAnimation) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    weatherdisplay.o(.ARM.exidx.text.UpdateSunnyAnimation) refers to weatherdisplay.o(.text.UpdateSunnyAnimation) for [Anonymous Symbol]
+    weatherdisplay.o(.text.UpdateCloudyAnimation) refers to weatherdisplay.o(.bss.animationFrame) for animationFrame
+    weatherdisplay.o(.text.UpdateCloudyAnimation) refers to weatherdisplay.o(.data.UpdateCloudyAnimation.prevBlink) for UpdateCloudyAnimation.prevBlink
+    weatherdisplay.o(.text.UpdateCloudyAnimation) refers to weatherdisplay.o(.rodata.cloud_day_blink) for cloud_day_blink
+    weatherdisplay.o(.text.UpdateCloudyAnimation) refers to weatherdisplay.o(.rodata.cloud_day) for cloud_day
+    weatherdisplay.o(.text.UpdateCloudyAnimation) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    weatherdisplay.o(.ARM.exidx.text.UpdateCloudyAnimation) refers to weatherdisplay.o(.text.UpdateCloudyAnimation) for [Anonymous Symbol]
+    weatherdisplay.o(.text.UpdateRainyAnimation) refers to weatherdisplay.o(.bss.animationFrame) for animationFrame
+    weatherdisplay.o(.text.UpdateRainyAnimation) refers to weatherdisplay.o(.data.UpdateRainyAnimation.prevBlink) for UpdateRainyAnimation.prevBlink
+    weatherdisplay.o(.text.UpdateRainyAnimation) refers to weatherdisplay.o(.rodata.rainy_blink) for rainy_blink
+    weatherdisplay.o(.text.UpdateRainyAnimation) refers to weatherdisplay.o(.rodata.rainy) for rainy
+    weatherdisplay.o(.text.UpdateRainyAnimation) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    weatherdisplay.o(.ARM.exidx.text.UpdateRainyAnimation) refers to weatherdisplay.o(.text.UpdateRainyAnimation) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    rand.o(.text) refers to rand.o(.data) for .data
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to weatherdisplay.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to weatherdisplay.o(.text.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+    Removing startup.o(.text), (28 bytes).
+    Removing pll.o(.text), (0 bytes).
+    Removing pll.o(.text.PLL_Init), (106 bytes).
+    Removing pll.o(.ARM.exidx.text.PLL_Init), (8 bytes).
+    Removing st7735.o(.text), (0 bytes).
+    Removing st7735.o(.text.Delay1ms), (42 bytes).
+    Removing st7735.o(.ARM.exidx.text.Delay1ms), (8 bytes).
+    Removing st7735.o(.text.ST7735_InitB), (172 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_InitB), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.commonInit), (8 bytes).
+    Removing st7735.o(.text.ST7735_SetCursor), (32 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SetCursor), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_FillScreen), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_InitR), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.commandList), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawPixel), (124 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawPixel), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.setAddrWindow), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawCircle), (1546 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawCircle), (8 bytes).
+    Removing st7735.o(.text.ST7735_FillCircle), (854 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_FillCircle), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawFastVLine), (152 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawFastVLine), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawLine), (436 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawLine), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawFastHLine), (152 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawFastHLine), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_FillRect), (8 bytes).
+    Removing st7735.o(.text.ST7735_Color565), (20 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_Color565), (8 bytes).
+    Removing st7735.o(.text.ST7735_SwapColor), (16 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SwapColor), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawBitmap), (306 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawBitmap), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawCharS), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawChar), (344 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawChar), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawString), (106 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawString), (8 bytes).
+    Removing st7735.o(.text.fillmessage), (70 bytes).
+    Removing st7735.o(.ARM.exidx.text.fillmessage), (8 bytes).
+    Removing st7735.o(.text.ST7735_OutUDec), (210 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_OutUDec), (8 bytes).
+    Removing st7735.o(.text.ST7735_SetRotation), (206 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SetRotation), (8 bytes).
+    Removing st7735.o(.text.ST7735_InvertDisplay), (68 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_InvertDisplay), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotClear), (172 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotClear), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotPoint), (526 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotPoint), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotLine), (908 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotLine), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotPoints), (360 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotPoints), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotBar), (212 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotBar), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotdBfs), (160 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotdBfs), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotNext), (22 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotNext), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotNextErase), (134 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotNextErase), (8 bytes).
+    Removing st7735.o(.text.ST7735_OutChar), (288 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_OutChar), (8 bytes).
+    Removing st7735.o(.text.ST7735_OutString), (32 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_OutString), (8 bytes).
+    Removing st7735.o(.text.ST7735_SetTextColor), (12 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SetTextColor), (8 bytes).
+    Removing st7735.o(.text.fputc), (12 bytes).
+    Removing st7735.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing st7735.o(.text.fgetc), (4 bytes).
+    Removing st7735.o(.ARM.exidx.text.fgetc), (8 bytes).
+    Removing st7735.o(.text.ferror), (6 bytes).
+    Removing st7735.o(.ARM.exidx.text.ferror), (8 bytes).
+    Removing st7735.o(.text.Output_Init), (132 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_Init), (8 bytes).
+    Removing st7735.o(.text.Output_Clear), (128 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_Clear), (8 bytes).
+    Removing st7735.o(.text.Output_Off), (128 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_Off), (8 bytes).
+    Removing st7735.o(.text.Output_On), (132 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_On), (8 bytes).
+    Removing st7735.o(.text.Output_Color), (12 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_Color), (8 bytes).
+    Removing st7735.o(.rodata.Bcmd), (103 bytes).
+    Removing st7735.o(.bss.Message), (12 bytes).
+    Removing st7735.o(.bss.Messageindex), (4 bytes).
+    Removing st7735.o(.bss.Ymax), (4 bytes).
+    Removing st7735.o(.bss.Ymin), (4 bytes).
+    Removing st7735.o(.bss.Yrange), (4 bytes).
+    Removing st7735.o(.bss.X), (4 bytes).
+    Removing st7735.o(.bss.lastj), (4 bytes).
+    Removing st7735.o(.rodata.dBfs), (512 bytes).
+    Removing weatherdisplay.o(.text), (0 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.main), (8 bytes).
+    Removing weatherdisplay.o(.text.PortF_Init), (78 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.PortF_Init), (8 bytes).
+    Removing weatherdisplay.o(.text.DelayWait10ms), (42 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.DelayWait10ms), (8 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.drawSunnyScreen), (8 bytes).
+    Removing weatherdisplay.o(.text.animateSun), (182 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.animateSun), (8 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.drawCloudyScreen), (8 bytes).
+    Removing weatherdisplay.o(.text.animateClouds), (182 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.animateClouds), (8 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.drawRainyScreen), (8 bytes).
+    Removing weatherdisplay.o(.text.animateRain), (182 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.animateRain), (8 bytes).
+    Removing weatherdisplay.o(.text.DrawStringSizedColor), (72 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.DrawStringSizedColor), (8 bytes).
+    Removing weatherdisplay.o(.text.UpdateSunnyAnimation), (182 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.UpdateSunnyAnimation), (8 bytes).
+    Removing weatherdisplay.o(.text.UpdateCloudyAnimation), (182 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.UpdateCloudyAnimation), (8 bytes).
+    Removing weatherdisplay.o(.text.UpdateRainyAnimation), (182 bytes).
+    Removing weatherdisplay.o(.ARM.exidx.text.UpdateRainyAnimation), (8 bytes).
+    Removing weatherdisplay.o(.bss.g_sunRayAngle), (4 bytes).
+    Removing weatherdisplay.o(.data.UpdateRainyAnimation.prevBlink), (4 bytes).
+    Removing weatherdisplay.o(.ARM.use_no_argv), (4 bytes).
+
+122 unused section(s) (total 10781 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/stdlib/rand.c           0x00000000   Number         0  rand.o ABSOLUTE
+    PLL.c                                    0x00000000   Number         0  pll.o ABSOLUTE
+    ST7735.c                                 0x00000000   Number         0  st7735.o ABSOLUTE
+    WeatherDisplay.c                         0x00000000   Number         0  weatherdisplay.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    RESET                                    0x00000000   Section      644  startup.o(RESET)
+    $v0                                      0x0000026c   Number         0  startup.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000284   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000284   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000288   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x0000028c   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x0000028c   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x0000028c   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x00000294   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x00000294   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000294   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000294   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000298   Section        0  rand.o(.text)
+    .text                                    0x000002bc   Section       48  init.o(.text)
+    [Anonymous Symbol]                       0x000002ec   Section        0  st7735.o(.text.ST7735_DrawCharS)
+    [Anonymous Symbol]                       0x00000510   Section        0  st7735.o(.text.ST7735_FillRect)
+    [Anonymous Symbol]                       0x000005c4   Section        0  st7735.o(.text.ST7735_FillScreen)
+    [Anonymous Symbol]                       0x0000064c   Section        0  st7735.o(.text.ST7735_InitR)
+    commandList                              0x00000775   Thumb Code   168  st7735.o(.text.commandList)
+    [Anonymous Symbol]                       0x00000774   Section        0  st7735.o(.text.commandList)
+    commonInit                               0x0000081d   Thumb Code   428  st7735.o(.text.commonInit)
+    [Anonymous Symbol]                       0x0000081c   Section        0  st7735.o(.text.commonInit)
+    [Anonymous Symbol]                       0x000009c8   Section        0  weatherdisplay.o(.text.drawCloudyScreen)
+    [Anonymous Symbol]                       0x00000ac8   Section        0  weatherdisplay.o(.text.drawRainyScreen)
+    [Anonymous Symbol]                       0x00000bd0   Section        0  weatherdisplay.o(.text.drawSunnyScreen)
+    [Anonymous Symbol]                       0x00000ce4   Section        0  weatherdisplay.o(.text.main)
+    setAddrWindow                            0x000010a5   Thumb Code   310  st7735.o(.text.setAddrWindow)
+    [Anonymous Symbol]                       0x000010a4   Section        0  st7735.o(.text.setAddrWindow)
+    i.__scatterload_copy                     0x000011da   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000011e8   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000011ea   Section       14  handlers.o(i.__scatterload_zeroinit)
+    Font                                     0x000011f8   Data        1275  st7735.o(.rodata.Font)
+    [Anonymous Symbol]                       0x000011f8   Section        0  st7735.o(.rodata.Font)
+    Rcmd1                                    0x000016f3   Data          59  st7735.o(.rodata.Rcmd1)
+    [Anonymous Symbol]                       0x000016f3   Section        0  st7735.o(.rodata.Rcmd1)
+    Rcmd2green                               0x0000172e   Data          13  st7735.o(.rodata.Rcmd2green)
+    [Anonymous Symbol]                       0x0000172e   Section        0  st7735.o(.rodata.Rcmd2green)
+    Rcmd2red                                 0x0000173b   Data          13  st7735.o(.rodata.Rcmd2red)
+    [Anonymous Symbol]                       0x0000173b   Section        0  st7735.o(.rodata.Rcmd2red)
+    Rcmd3                                    0x00001748   Data          43  st7735.o(.rodata.Rcmd3)
+    [Anonymous Symbol]                       0x00001748   Section        0  st7735.o(.rodata.Rcmd3)
+    _rand_state                              0x20000000   Data           4  rand.o(.data)
+    .data                                    0x20000000   Section        4  rand.o(.data)
+    UpdateCloudyAnimation.prevBlink          0x20000008   Data           4  weatherdisplay.o(.data.UpdateCloudyAnimation.prevBlink)
+    [Anonymous Symbol]                       0x20000008   Section        0  weatherdisplay.o(.data.UpdateCloudyAnimation.prevBlink)
+    UpdateSunnyAnimation.prevBlink           0x2000000c   Data           4  weatherdisplay.o(.data.UpdateSunnyAnimation.prevBlink)
+    [Anonymous Symbol]                       0x2000000c   Section        0  weatherdisplay.o(.data.UpdateSunnyAnimation.prevBlink)
+    animateRain.prevBlink                    0x20000010   Data           4  weatherdisplay.o(.data.animateRain.prevBlink)
+    [Anonymous Symbol]                       0x20000010   Section        0  weatherdisplay.o(.data.animateRain.prevBlink)
+    ColStart                                 0x20000018   Data           1  st7735.o(.bss.ColStart)
+    [Anonymous Symbol]                       0x20000018   Section        0  st7735.o(.bss.ColStart)
+    RowStart                                 0x20000019   Data           1  st7735.o(.bss.RowStart)
+    [Anonymous Symbol]                       0x20000019   Section        0  st7735.o(.bss.RowStart)
+    TabColor                                 0x20000024   Data           1  st7735.o(.bss.TabColor)
+    [Anonymous Symbol]                       0x20000024   Section        0  st7735.o(.bss.TabColor)
+    _height                                  0x20000026   Data           1  st7735.o(.bss._height)
+    [Anonymous Symbol]                       0x20000026   Section        0  st7735.o(.bss._height)
+    _width                                   0x20000028   Data           1  st7735.o(.bss._width)
+    [Anonymous Symbol]                       0x20000028   Section        0  st7735.o(.bss._width)
+    animationFrame                           0x2000002c   Data           4  weatherdisplay.o(.bss.animationFrame)
+    [Anonymous Symbol]                       0x2000002c   Section        0  weatherdisplay.o(.bss.animationFrame)
+    StackMem                                 0x200001e0   Data           0  startup.o(STACK)
+    STACK                                    0x200001e0   Section     1024  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup.o(RESET)
+    NMI_Handler                              0x00000271   Thumb Code     2  startup.o(RESET)
+    HardFault_Handler                        0x00000273   Thumb Code     2  startup.o(RESET)
+    MemManage_Handler                        0x00000275   Thumb Code     2  startup.o(RESET)
+    BusFault_Handler                         0x00000277   Thumb Code     2  startup.o(RESET)
+    UsageFault_Handler                       0x00000279   Thumb Code     2  startup.o(RESET)
+    SVC_Handler                              0x0000027b   Thumb Code     2  startup.o(RESET)
+    DebugMon_Handler                         0x0000027d   Thumb Code     2  startup.o(RESET)
+    PendSV_Handler                           0x0000027f   Thumb Code     2  startup.o(RESET)
+    SysTick_Handler                          0x00000281   Thumb Code     2  startup.o(RESET)
+    ADC0Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Ethernet_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ExtBus_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    FPU_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    Fan0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    FlashCtl_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortA_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortB_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortC_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortD_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortE_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortF_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortG_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortH_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortJ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortK_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortL_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortM_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortN_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortR_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortS_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    Hibernate_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C4_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C5_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2S0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    LPC0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    PECI0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature0_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature1_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature2_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SysCtl_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    UART0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART3_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART4_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART5_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART6_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART7_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    USB0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    WDT_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Error                               0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    __main                                   0x00000285   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000285   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000289   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x0000028d   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x0000028d   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x0000028d   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000295   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000295   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    rand                                     0x00000299   Thumb Code    20  rand.o(.text)
+    srand                                    0x000002ad   Thumb Code     6  rand.o(.text)
+    __scatterload                            0x000002bd   Thumb Code    38  init.o(.text)
+    __scatterload_rt2                        0x000002bd   Thumb Code     0  init.o(.text)
+    ST7735_DrawCharS                         0x000002ed   Thumb Code   548  st7735.o(.text.ST7735_DrawCharS)
+    ST7735_FillRect                          0x00000511   Thumb Code   180  st7735.o(.text.ST7735_FillRect)
+    ST7735_FillScreen                        0x000005c5   Thumb Code   136  st7735.o(.text.ST7735_FillScreen)
+    ST7735_InitR                             0x0000064d   Thumb Code   294  st7735.o(.text.ST7735_InitR)
+    drawCloudyScreen                         0x000009c9   Thumb Code   196  weatherdisplay.o(.text.drawCloudyScreen)
+    drawRainyScreen                          0x00000ac9   Thumb Code   204  weatherdisplay.o(.text.drawRainyScreen)
+    drawSunnyScreen                          0x00000bd1   Thumb Code   216  weatherdisplay.o(.text.drawSunnyScreen)
+    main                                     0x00000ce5   Thumb Code   960  weatherdisplay.o(.text.main)
+    __scatterload_copy                       0x000011db   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000011e9   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000011eb   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    cloud_day                                0x00001774   Data         800  weatherdisplay.o(.rodata.cloud_day)
+    cloud_day_blink                          0x00001a94   Data         800  weatherdisplay.o(.rodata.cloud_day_blink)
+    rainy                                    0x00001db4   Data         800  weatherdisplay.o(.rodata.rainy)
+    rainy_blink                              0x000020d4   Data         800  weatherdisplay.o(.rodata.rainy_blink)
+    sunny_day                                0x000023f4   Data         800  weatherdisplay.o(.rodata.sunny_day)
+    sunny_day_blink                          0x00002714   Data         800  weatherdisplay.o(.rodata.sunny_day_blink)
+    Region$$Table$$Base                      0x00002a34   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002a54   Number         0  anon$$obj.o(Region$$Table)
+    StTextColor                              0x20000004   Data           2  st7735.o(.data.StTextColor)
+    StX                                      0x2000001c   Data           4  st7735.o(.bss.StX)
+    StY                                      0x20000020   Data           4  st7735.o(.bss.StY)
+    g_clouds                                 0x20000030   Data          30  weatherdisplay.o(.bss.g_clouds)
+    g_rainDrops                              0x2000004e   Data         400  weatherdisplay.o(.bss.g_rainDrops)
+    __initial_sp                             0x200005e0   Data           0  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00002a68, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00002a54, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000284   Code   RO            3  * RESET               startup.o
+    0x00000284   0x00000284   0x00000000   Code   RO          188  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000284   0x00000284   0x00000004   Code   RO          194    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000288   0x00000288   0x00000004   Code   RO          197    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0000028c   0x0000028c   0x00000000   Code   RO          199    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0000028c   0x0000028c   0x00000000   Code   RO          201    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0000028c   0x0000028c   0x00000008   Code   RO          202    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000294   0x00000294   0x00000000   Code   RO          204    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000294   0x00000294   0x00000000   Code   RO          206    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000294   0x00000294   0x00000004   Code   RO          195    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000298   0x00000298   0x00000024   Code   RO          191    .text               mc_w.l(rand.o)
+    0x000002bc   0x000002bc   0x00000030   Code   RO          208    .text               mc_w.l(init.o)
+    0x000002ec   0x000002ec   0x00000224   Code   RO           58    .text.ST7735_DrawCharS  st7735.o
+    0x00000510   0x00000510   0x000000b4   Code   RO           50    .text.ST7735_FillRect  st7735.o
+    0x000005c4   0x000005c4   0x00000088   Code   RO           30    .text.ST7735_FillScreen  st7735.o
+    0x0000064c   0x0000064c   0x00000126   Code   RO           32    .text.ST7735_InitR  st7735.o
+    0x00000772   0x00000772   0x00000002   PAD
+    0x00000774   0x00000774   0x000000a8   Code   RO           34    .text.commandList   st7735.o
+    0x0000081c   0x0000081c   0x000001ac   Code   RO           26    .text.commonInit    st7735.o
+    0x000009c8   0x000009c8   0x00000100   Code   RO          150    .text.drawCloudyScreen  weatherdisplay.o
+    0x00000ac8   0x00000ac8   0x00000108   Code   RO          154    .text.drawRainyScreen  weatherdisplay.o
+    0x00000bd0   0x00000bd0   0x00000114   Code   RO          146    .text.drawSunnyScreen  weatherdisplay.o
+    0x00000ce4   0x00000ce4   0x000003c0   Code   RO          140    .text.main          weatherdisplay.o
+    0x000010a4   0x000010a4   0x00000136   Code   RO           38    .text.setAddrWindow  st7735.o
+    0x000011da   0x000011da   0x0000000e   Code   RO          212    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000011e8   0x000011e8   0x00000002   Code   RO          213    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000011ea   0x000011ea   0x0000000e   Code   RO          214    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000011f8   0x000011f8   0x000004fb   Data   RO          123    .rodata.Font        st7735.o
+    0x000016f3   0x000016f3   0x0000003b   Data   RO          114    .rodata.Rcmd1       st7735.o
+    0x0000172e   0x0000172e   0x0000000d   Data   RO          115    .rodata.Rcmd2green  st7735.o
+    0x0000173b   0x0000173b   0x0000000d   Data   RO          118    .rodata.Rcmd2red    st7735.o
+    0x00001748   0x00001748   0x0000002b   Data   RO          119    .rodata.Rcmd3       st7735.o
+    0x00001773   0x00001773   0x00000001   PAD
+    0x00001774   0x00001774   0x00000320   Data   RO          166    .rodata.cloud_day   weatherdisplay.o
+    0x00001a94   0x00001a94   0x00000320   Data   RO          167    .rodata.cloud_day_blink  weatherdisplay.o
+    0x00001db4   0x00001db4   0x00000320   Data   RO          170    .rodata.rainy       weatherdisplay.o
+    0x000020d4   0x000020d4   0x00000320   Data   RO          171    .rodata.rainy_blink  weatherdisplay.o
+    0x000023f4   0x000023f4   0x00000320   Data   RO          168    .rodata.sunny_day   weatherdisplay.o
+    0x00002714   0x00002714   0x00000320   Data   RO          169    .rodata.sunny_day_blink  weatherdisplay.o
+    0x00002a34   0x00002a34   0x00000020   Data   RO          211    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00002a54, Size: 0x00000014, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00002a54   0x00000004   Data   RW          192    .data               mc_w.l(rand.o)
+    0x20000004   0x00002a58   0x00000002   Data   RW          112    .data.StTextColor   st7735.o
+    0x20000006   0x00002a5a   0x00000002   PAD
+    0x20000008   0x00002a5c   0x00000004   Data   RW          177    .data.UpdateCloudyAnimation.prevBlink  weatherdisplay.o
+    0x2000000c   0x00002a60   0x00000004   Data   RW          175    .data.UpdateSunnyAnimation.prevBlink  weatherdisplay.o
+    0x20000010   0x00002a64   0x00000004   Data   RW          179    .data.animateRain.prevBlink  weatherdisplay.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000018, Load base: 0x00002a68, Size: 0x000005c8, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000018        -       0x00000001   Zero   RW          116    .bss.ColStart       st7735.o
+    0x20000019        -       0x00000001   Zero   RW          117    .bss.RowStart       st7735.o
+    0x2000001a   0x00002a68   0x00000002   PAD
+    0x2000001c        -       0x00000004   Zero   RW          110    .bss.StX            st7735.o
+    0x20000020        -       0x00000004   Zero   RW          111    .bss.StY            st7735.o
+    0x20000024        -       0x00000001   Zero   RW          120    .bss.TabColor       st7735.o
+    0x20000025   0x00002a68   0x00000001   PAD
+    0x20000026        -       0x00000001   Zero   RW          122    .bss._height        st7735.o
+    0x20000027   0x00002a68   0x00000001   PAD
+    0x20000028        -       0x00000001   Zero   RW          121    .bss._width         st7735.o
+    0x20000029   0x00002a68   0x00000003   PAD
+    0x2000002c        -       0x00000004   Zero   RW          176    .bss.animationFrame  weatherdisplay.o
+    0x20000030        -       0x0000001e   Zero   RW          173    .bss.g_clouds       weatherdisplay.o
+    0x2000004e        -       0x00000190   Zero   RW          174    .bss.g_rainDrops    weatherdisplay.o
+    0x200001de   0x00002a68   0x00000002   PAD
+    0x200001e0        -       0x00000400   Zero   RW            1    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2064          0       1403          2         13      33996   st7735.o
+       644        620          0          0       1024        788   startup.o
+      1756        180       4800         12        434       9986   weatherdisplay.o
+
+    ----------------------------------------------------------------------
+      4466        800       6236         16       1480      44770   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          1          2          9          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        48         10          0          0          0         68   init.o
+        36         10          0          4          0        136   rand.o
+
+    ----------------------------------------------------------------------
+       134         28          0          4          0        204   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       134         28          0          4          0        204   mc_w.l
+
+    ----------------------------------------------------------------------
+       134         28          0          4          0        204   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      4600        828       6236         20       1480      45158   Grand Totals
+      4600        828       6236         20       1480      45158   ELF Image Totals
+      4600        828       6236         20          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                10836 (  10.58kB)
+    Total RW  Size (RW Data + ZI Data)              1500 (   1.46kB)
+    Total ROM Size (Code + RO Data + RW Data)      10856 (  10.60kB)
+
+==============================================================================
+
